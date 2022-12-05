@@ -6,8 +6,8 @@ function indertTicketsToDB(file, db)
 { 
   // open the spreadsheet file
   const workbook = xlsx.readFile("ticket_sheets.xlsx"),
-  worksheet = workbook.Sheets[workbook.SheetNames[0]],
-  range = xlsx.utils.decode_range(worksheet["!ref"]);
+    worksheet = workbook.Sheets[workbook.SheetNames[0]],
+      range = xlsx.utils.decode_range(worksheet["!ref"]);
   
   // importing the spreadsheet
   for (let row=range.s.r; row<=range.e.r; row++) 
