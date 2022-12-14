@@ -77,7 +77,7 @@ app.post("/api/ticket_sheet", upload.single('ticket_sheet'), (req, res, next) =>
     res.send();
 })
 
-const PORT = 3040 //process.env.EXPRESSPORT;
+const PORT = process.env.EXPRESSPORT;
 const msg = `Running on PORT ${PORT}`
 app.get("/", (req, res) => {
     res.send(`<h1>Express Server</h1><p>${msg}<p>`)
